@@ -1,0 +1,202 @@
+NAME_MAX_LENGTH = 1000
+TEXT_MAX_LENGTH = 4000
+CODE_MAX_LENGTH = 50
+NOTE_MAX_LENGTH = 4000
+EMAIL_MAX_LENGTH = 500
+entity Donvi{
+        Madv String,
+        Tendv String,
+        Dienthoai Integer,
+        Fax Integer,
+        Email String,
+        Sudung Integer
+}
+entity Linhvuc{
+		Malv String,
+        Tenlv String,
+        Sudung Integer
+}
+entity Capdetai{
+		Macapdetai String,
+        Tencapdetai String,
+        Sudung Integer
+}
+entity Chucdanh{
+		Machucdanh String,
+        Tenchucdanh String,
+        Sudung Integer
+}
+entity Hocham{
+		Mahocham String, 
+        Tenhocham String,
+        Sudung Integer
+}
+entity Nhansu{
+		Manhansu String,
+        Tennhansu String,
+        Sdt Integer,
+        Email String,
+        Diachi String,
+        Namsinh String,
+	Ngaysinh LocalDate,
+        Sudung Integer
+}
+entity Nhansuthamgia{
+	Sudung Integer
+}
+entity Chunhiem{
+		Ten String,
+		Sudung Integer
+}
+entity Coquanphoihop{
+		Macoquan String,
+        Tencoquan String,
+        Noidung String,
+        Tendaidien String,
+        Sudung Integer
+}
+entity Coquanphoihopthamgia{
+	Sudung Integer
+}
+entity Nguonkinhphi{
+		Manguonkinhphi String,
+        Tennguonkinhphi String,
+        Noidung String,
+        Sotiencap Integer,
+        Sudung Integer
+}
+entity Detai{
+	Ma String,
+        Ten String,
+        Thoigiantao LocalDate,
+        Thoigianbatdau LocalDate,
+        Thoigianketthuc LocalDate,
+        Muctieu String,
+        Noidung String,
+        Tinhcapthiet String,
+	Nguoihuongdan String,
+        Ketqua String,
+        Xeploai Integer,
+	Phanloai Integer,
+        Trangthai Integer,
+        Tenchunhiem String,
+        Sudung Integer
+}
+entity DutoanKP{
+        Madutoan String,
+        Tendutoan String,
+        Noidung String,
+        Sudung Integer
+}
+entity DutoanKPCT{
+	Noidung String,
+        Soluong Integer,
+        Mucchi Integer,
+        Tong Integer,
+        Sudung Integer
+}
+entity NoidungDT{
+		Tennoidung String,
+        Sudung Integer
+}
+entity Tiendo{
+		Matiendo String,
+        Kybaocao String,
+        Noidung String,
+        Thoigianbatdau LocalDate,
+        Thoigianketthuc LocalDate,
+        Khoiluonghoanthanh Integer,
+        Ghichu String,
+        Sudung Integer
+}
+entity Danhgia{
+		Ma String,
+        Ten String,
+        Diem Integer,
+        Noidung String,
+        Sudung Integer
+}
+entity DanhgiaCT{
+		Noidung String,
+		Diem Integer,
+        Sudung Integer
+        
+}
+entity Noidungdanhgia {
+		Noidung String,
+        Sudung Integer
+}
+entity Hoidongdanhgia{
+		Mahoidong String,
+        Tenhoidong String,
+        Sudung Integer
+}
+entity ThanhvienHD{
+		Ten String,
+        Donvi String,
+        Trachnhiem Integer,
+        Sudung Integer
+}
+entity Upfile{
+	Mota String,
+	Noidung Blob,
+	Thoigian LocalDate,
+	
+}
+entity Danhsachbaibao{
+	Tenbaibao String,
+    Phanloai Integer,
+    Tenhoithao String,
+    Namxuatban Integer,
+    Thangxuatban Integer,
+    Danhmuc Integer,
+	Iffff String,
+    Hindex String,
+    Xeploai Integer,
+    Rankbaibao Integer,
+    Volbaibao String,
+    Sobaibao Integer,
+    Ppbaibao String,
+    Link String,
+    Ghichu String,
+Tacgiachinh String,
+    Tacgiakhac String,
+    Tendetai String
+}
+relationship OneToMany{ 
+	Donvi to Nhansu,
+        Chucdanh to Nhansu,
+        Hocham to Nhansu,
+        Linhvuc to Detai,
+        Capdetai to Detai,
+        DutoanKP to DutoanKPCT,
+        NoidungDT to DutoanKPCT,
+        Detai to Tiendo,
+        Danhgia to DanhgiaCT,
+        Hoidongdanhgia to Detai,
+        Hoidongdanhgia to ThanhvienHD,
+        Noidungdanhgia to DanhgiaCT,
+        Nhansu to Chunhiem,
+	Detai to Upfile,
+	Tiendo to Upfile,
+	Chunhiem to Detai,
+	Nhansu to Nhansuthamgia,
+	Detai to Nhansuthamgia,
+	Detai to Nguonkinhphi,
+	Detai to Coquanphoihopthamgia,
+	Coquanphoihop to Coquanphoihopthamgia,
+	Detai to Danhgia,
+	Detai to DutoanKP,
+	Detai to Danhsachbaibao
+	
+	
+}
+
+dto all with mapstruct
+filter all
+paginate all with pagination
+service all with serviceImpl
+
+
+
+
