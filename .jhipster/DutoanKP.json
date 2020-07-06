@@ -1,0 +1,46 @@
+{
+    "name": "DutoanKP",
+    "fields": [
+        {
+            "fieldName": "madutoan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tendutoan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dutoanKPCT",
+            "otherEntityRelationshipName": "dutoanKP",
+            "relationshipName": "dutoanKPCT"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "dutoanKP",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140131",
+    "entityTableName": "dutoan_kp",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

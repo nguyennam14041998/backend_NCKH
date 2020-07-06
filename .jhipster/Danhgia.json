@@ -1,0 +1,50 @@
+{
+    "name": "Danhgia",
+    "fields": [
+        {
+            "fieldName": "ma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diem",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "danhgiaCT",
+            "otherEntityRelationshipName": "danhgia",
+            "relationshipName": "danhgiaCT"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "danhgia",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140135",
+    "entityTableName": "danhgia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

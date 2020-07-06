@@ -1,0 +1,35 @@
+{
+    "name": "Coquanphoihopthamgia",
+    "fields": [
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "coquanphoihopthamgia",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "coquanphoihop",
+            "otherEntityRelationshipName": "coquanphoihopthamgia",
+            "relationshipName": "coquanphoihop",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140128",
+    "entityTableName": "coquanphoihopthamgia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

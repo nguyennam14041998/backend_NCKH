@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity DutoanKPCT.
+    -->
+    <changeSet id="20200705140132-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dutoankp_id"
+                                 baseTableName="dutoan_kpct"
+                                 constraintName="fk_dutoan_kpct_dutoankp_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dutoan_kp"/>
+
+        <addForeignKeyConstraint baseColumnNames="noidungdt_id"
+                                 baseTableName="dutoan_kpct"
+                                 constraintName="fk_dutoan_kpct_noidungdt_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="noidung_dt"/>
+
+    </changeSet>
+</databaseChangeLog>

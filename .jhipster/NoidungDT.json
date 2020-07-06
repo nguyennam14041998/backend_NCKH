@@ -1,0 +1,31 @@
+{
+    "name": "NoidungDT",
+    "fields": [
+        {
+            "fieldName": "tennoidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dutoanKPCT",
+            "otherEntityRelationshipName": "noidungDT",
+            "relationshipName": "dutoanKPCT"
+        }
+    ],
+    "changelogDate": "20200705140133",
+    "entityTableName": "noidung_dt",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

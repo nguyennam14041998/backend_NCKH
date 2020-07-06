@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Detai.
+    -->
+    <changeSet id="20200705140130-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="linhvuc_id"
+                                 baseTableName="detai"
+                                 constraintName="fk_detai_linhvuc_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="linhvuc"/>
+
+        <addForeignKeyConstraint baseColumnNames="capdetai_id"
+                                 baseTableName="detai"
+                                 constraintName="fk_detai_capdetai_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="capdetai"/>
+
+        <addForeignKeyConstraint baseColumnNames="hoidongdanhgia_id"
+                                 baseTableName="detai"
+                                 constraintName="fk_detai_hoidongdanhgia_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hoidongdanhgia"/>
+
+        <addForeignKeyConstraint baseColumnNames="chunhiem_id"
+                                 baseTableName="detai"
+                                 constraintName="fk_detai_chunhiem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chunhiem"/>
+
+    </changeSet>
+</databaseChangeLog>

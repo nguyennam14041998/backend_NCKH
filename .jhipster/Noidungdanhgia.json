@@ -1,0 +1,31 @@
+{
+    "name": "Noidungdanhgia",
+    "fields": [
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "danhgiaCT",
+            "otherEntityRelationshipName": "noidungdanhgia",
+            "relationshipName": "danhgiaCT"
+        }
+    ],
+    "changelogDate": "20200705140137",
+    "entityTableName": "noidungdanhgia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

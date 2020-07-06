@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Upfile.
+    -->
+    <changeSet id="20200705140140-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="detai_id"
+                                 baseTableName="upfile"
+                                 constraintName="fk_upfile_detai_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="detai"/>
+
+        <addForeignKeyConstraint baseColumnNames="tiendo_id"
+                                 baseTableName="upfile"
+                                 constraintName="fk_upfile_tiendo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tiendo"/>
+
+    </changeSet>
+</databaseChangeLog>

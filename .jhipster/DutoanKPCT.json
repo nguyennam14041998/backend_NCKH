@@ -1,0 +1,51 @@
+{
+    "name": "DutoanKPCT",
+    "fields": [
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "soluong",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "mucchi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tong",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dutoanKP",
+            "otherEntityRelationshipName": "dutoanKPCT",
+            "relationshipName": "dutoanKP",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "noidungDT",
+            "otherEntityRelationshipName": "dutoanKPCT",
+            "relationshipName": "noidungDT",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140132",
+    "entityTableName": "dutoan_kpct",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

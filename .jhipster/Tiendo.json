@@ -1,0 +1,62 @@
+{
+    "name": "Tiendo",
+    "fields": [
+        {
+            "fieldName": "matiendo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kybaocao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thoigianbatdau",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "thoigianketthuc",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "khoiluonghoanthanh",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ghichu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "upfile",
+            "otherEntityRelationshipName": "tiendo",
+            "relationshipName": "upfile"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "tiendo",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140134",
+    "entityTableName": "tiendo",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

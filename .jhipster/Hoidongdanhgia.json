@@ -1,0 +1,41 @@
+{
+    "name": "Hoidongdanhgia",
+    "fields": [
+        {
+            "fieldName": "mahoidong",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenhoidong",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "hoidongdanhgia",
+            "relationshipName": "detai"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "thanhvienHD",
+            "otherEntityRelationshipName": "hoidongdanhgia",
+            "relationshipName": "thanhvienHD"
+        }
+    ],
+    "changelogDate": "20200705140138",
+    "entityTableName": "hoidongdanhgia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

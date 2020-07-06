@@ -1,0 +1,35 @@
+{
+    "name": "Linhvuc",
+    "fields": [
+        {
+            "fieldName": "malv",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenlv",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "linhvuc",
+            "relationshipName": "detai"
+        }
+    ],
+    "changelogDate": "20200705140120",
+    "entityTableName": "linhvuc",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "ThanhvienHD",
+    "fields": [
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "donvi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trachnhiem",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hoidongdanhgia",
+            "otherEntityRelationshipName": "thanhvienHD",
+            "relationshipName": "hoidongdanhgia",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140139",
+    "entityTableName": "thanhvien_hd",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

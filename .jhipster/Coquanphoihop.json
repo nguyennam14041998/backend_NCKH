@@ -1,0 +1,43 @@
+{
+    "name": "Coquanphoihop",
+    "fields": [
+        {
+            "fieldName": "macoquan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tencoquan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tendaidien",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "coquanphoihopthamgia",
+            "otherEntityRelationshipName": "coquanphoihop",
+            "relationshipName": "coquanphoihopthamgia"
+        }
+    ],
+    "changelogDate": "20200705140127",
+    "entityTableName": "coquanphoihop",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

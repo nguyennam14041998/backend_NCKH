@@ -1,0 +1,96 @@
+{
+    "name": "Danhsachbaibao",
+    "fields": [
+        {
+            "fieldName": "tenbaibao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phanloai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tenhoithao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "namxuatban",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "thangxuatban",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "danhmuc",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "iffff",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hindex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "xeploai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "rankbaibao",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "volbaibao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sobaibao",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ppbaibao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "link",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ghichu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tacgiachinh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tacgiakhac",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tendetai",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "danhsachbaibao",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140141",
+    "entityTableName": "danhsachbaibao",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

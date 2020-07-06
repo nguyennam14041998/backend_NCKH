@@ -1,0 +1,38 @@
+{
+    "name": "Chunhiem",
+    "fields": [
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "chunhiem",
+            "relationshipName": "detai"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nhansu",
+            "otherEntityRelationshipName": "chunhiem",
+            "relationshipName": "nhansu",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140126",
+    "entityTableName": "chunhiem",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

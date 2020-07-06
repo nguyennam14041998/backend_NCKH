@@ -1,0 +1,82 @@
+{
+    "name": "Nhansu",
+    "fields": [
+        {
+            "fieldName": "manhansu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tennhansu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sdt",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diachi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "namsinh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngaysinh",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "chunhiem",
+            "otherEntityRelationshipName": "nhansu",
+            "relationshipName": "chunhiem"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nhansuthamgia",
+            "otherEntityRelationshipName": "nhansu",
+            "relationshipName": "nhansuthamgia"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "donvi",
+            "otherEntityRelationshipName": "nhansu",
+            "relationshipName": "donvi",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "chucdanh",
+            "otherEntityRelationshipName": "nhansu",
+            "relationshipName": "chucdanh",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hocham",
+            "otherEntityRelationshipName": "nhansu",
+            "relationshipName": "hocham",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140124",
+    "entityTableName": "nhansu",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

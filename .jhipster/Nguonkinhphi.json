@@ -1,0 +1,44 @@
+{
+    "name": "Nguonkinhphi",
+    "fields": [
+        {
+            "fieldName": "manguonkinhphi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tennguonkinhphi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sotiencap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "detai",
+            "otherEntityRelationshipName": "nguonkinhphi",
+            "relationshipName": "detai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200705140129",
+    "entityTableName": "nguonkinhphi",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

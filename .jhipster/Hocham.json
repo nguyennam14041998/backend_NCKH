@@ -1,0 +1,35 @@
+{
+    "name": "Hocham",
+    "fields": [
+        {
+            "fieldName": "mahocham",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenhocham",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nhansu",
+            "otherEntityRelationshipName": "hocham",
+            "relationshipName": "nhansu"
+        }
+    ],
+    "changelogDate": "20200705140123",
+    "entityTableName": "hocham",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
