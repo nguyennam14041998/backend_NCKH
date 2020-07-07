@@ -32,7 +32,7 @@ public class DutoanKPCTCriteria implements Serializable, Criteria {
 
     private IntegerFilter mucchi;
 
-    private IntegerFilter tong;
+    private LongFilter tong;
 
     private IntegerFilter sudung;
 
@@ -91,11 +91,11 @@ public class DutoanKPCTCriteria implements Serializable, Criteria {
         this.mucchi = mucchi;
     }
 
-    public IntegerFilter getTong() {
+    public LongFilter getTong() {
         return tong;
     }
 
-    public void setTong(IntegerFilter tong) {
+    public void setTong(LongFilter tong) {
         this.tong = tong;
     }
 

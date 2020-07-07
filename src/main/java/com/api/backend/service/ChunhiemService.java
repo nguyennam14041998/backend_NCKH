@@ -1,5 +1,6 @@
 package com.api.backend.service;
 
+import com.api.backend.domain.Chunhiem;
 import com.api.backend.service.dto.ChunhiemDTO;
 
 import org.springframework.data.domain.Page;
@@ -35,7 +36,7 @@ public interface ChunhiemService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    Optional<ChunhiemDTO> findOne(Long id);
+    Optional<Chunhiem> findOne(Long id);
 
     /**
      * Delete the "id" chunhiem.

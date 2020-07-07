@@ -1,5 +1,6 @@
 package com.api.backend.web.rest;
 
+import com.api.backend.domain.Nhansuthamgia;
 import com.api.backend.service.NhansuthamgiaService;
 import com.api.backend.web.rest.errors.BadRequestAlertException;
 import com.api.backend.service.dto.NhansuthamgiaDTO;
@@ -99,9 +100,9 @@ public class NhansuthamgiaResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of nhansuthamgias in body.
      */
     @GetMapping("/nhansuthamgias")
-    public ResponseEntity<List<NhansuthamgiaDTO>> getAllNhansuthamgias(NhansuthamgiaCriteria criteria, Pageable pageable) {
+    public ResponseEntity<List<Nhansuthamgia>> getAllNhansuthamgias(NhansuthamgiaCriteria criteria, Pageable pageable) {
         log.debug("REST request to get Nhansuthamgias by criteria: {}", criteria);
-        Page<NhansuthamgiaDTO> page = nhansuthamgiaQueryService.findByCriteria(criteria, pageable);
+        Page<Nhansuthamgia> page = nhansuthamgiaQueryService.findByCriteria(criteria, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
@@ -125,9 +126,9 @@ public class NhansuthamgiaResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the nhansuthamgiaDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/nhansuthamgias/{id}")
-    public ResponseEntity<NhansuthamgiaDTO> getNhansuthamgia(@PathVariable Long id) {
+    public ResponseEntity<Nhansuthamgia> getNhansuthamgia(@PathVariable Long id) {
         log.debug("REST request to get Nhansuthamgia : {}", id);
-        Optional<NhansuthamgiaDTO> nhansuthamgiaDTO = nhansuthamgiaService.findOne(id);
+        Optional<Nhansuthamgia> nhansuthamgiaDTO = nhansuthamgiaService.findOne(id);
         return ResponseUtil.wrapOrNotFound(nhansuthamgiaDTO);
     }
 

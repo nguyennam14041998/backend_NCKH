@@ -16,6 +16,7 @@ import java.util.Set;
 @Entity
 @Table(name = "nhansu")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@JsonIgnoreProperties(value = {"chunhiems","nhansuthamgias"})
 public class Nhansu implements Serializable {
 
     private static final long serialVersionUID = 1L;

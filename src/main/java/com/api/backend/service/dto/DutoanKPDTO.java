@@ -17,6 +17,15 @@ public class DutoanKPDTO implements Serializable {
 
     private Integer sudung;
 
+    private Long tongChiPhi;
+
+    public Long getTongChiPhi() {
+        return tongChiPhi;
+    }
+
+    public void setTongChiPhi(Long tongChiPhi) {
+        this.tongChiPhi = tongChiPhi;
+    }
 
     private Long detaiId;
 

@@ -1,5 +1,6 @@
 package com.api.backend.web.rest;
 
+import com.api.backend.domain.Chunhiem;
 import com.api.backend.service.ChunhiemService;
 import com.api.backend.web.rest.errors.BadRequestAlertException;
 import com.api.backend.service.dto.ChunhiemDTO;
@@ -99,9 +100,9 @@ public class ChunhiemResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of chunhiems in body.
      */
     @GetMapping("/chunhiems")
-    public ResponseEntity<List<ChunhiemDTO>> getAllChunhiems(ChunhiemCriteria criteria, Pageable pageable) {
+    public ResponseEntity<List<Chunhiem>> getAllChunhiems(ChunhiemCriteria criteria, Pageable pageable) {
         log.debug("REST request to get Chunhiems by criteria: {}", criteria);
-        Page<ChunhiemDTO> page = chunhiemQueryService.findByCriteria(criteria, pageable);
+        Page<Chunhiem> page = chunhiemQueryService.findByCriteria(criteria, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
@@ -125,9 +126,9 @@ public class ChunhiemResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the chunhiemDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/chunhiems/{id}")
-    public ResponseEntity<ChunhiemDTO> getChunhiem(@PathVariable Long id) {
+    public ResponseEntity<Chunhiem> getChunhiem(@PathVariable Long id) {
         log.debug("REST request to get Chunhiem : {}", id);
-        Optional<ChunhiemDTO> chunhiemDTO = chunhiemService.findOne(id);
+        Optional<Chunhiem> chunhiemDTO = chunhiemService.findOne(id);
         return ResponseUtil.wrapOrNotFound(chunhiemDTO);
     }
 

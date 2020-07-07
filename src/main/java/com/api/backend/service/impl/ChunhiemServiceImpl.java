@@ -70,10 +70,10 @@ public class ChunhiemServiceImpl implements ChunhiemService {
      */
     @Override
     @Transactional(readOnly = true)
-    public Optional<ChunhiemDTO> findOne(Long id) {
+    public Optional<Chunhiem> findOne(Long id) {
         log.debug("Request to get Chunhiem : {}", id);
-        return chunhiemRepository.findById(id)
-            .map(chunhiemMapper::toDto);
+        return chunhiemRepository.findById(id);
+//            .map(chunhiemMapper::toDto);
     }
 
     /**

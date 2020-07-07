@@ -1,5 +1,6 @@
 package com.api.backend.service;
 
+import com.api.backend.domain.Detai;
 import com.api.backend.service.dto.DetaiDTO;
 
 import org.springframework.data.domain.Page;
@@ -35,7 +36,7 @@ public interface DetaiService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    Optional<DetaiDTO> findOne(Long id);
+    Optional<Detai> findOne(Long id);
 
     /**
      * Delete the "id" detai.

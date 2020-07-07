@@ -16,6 +16,7 @@ import java.util.Set;
 @Entity
 @Table(name = "detai")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@JsonIgnoreProperties(value = {"tiendos","upfiles","nhansuthamgias","nguonkinhphis","coquanphoihopthamgias","danhgias","dutoanKPS","danhsachbaibaos"})
 public class Detai implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -114,7 +115,7 @@ public class Detai implements Serializable {
     private Hoidongdanhgia hoidongdanhgia;
 
     @ManyToOne
-    @JsonIgnoreProperties("detais")
+    @JsonIgnoreProperties(value = {"detais","nhansu"})
     private Chunhiem chunhiem;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

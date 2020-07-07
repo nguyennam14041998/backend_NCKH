@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.criteria.JoinType;
 
+import com.api.backend.service.mapper.MyDuToanKinhPhiMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -35,9 +36,9 @@ public class DutoanKPQueryService extends QueryService<DutoanKP> {
 
     private final DutoanKPRepository dutoanKPRepository;
 
-    private final DutoanKPMapper dutoanKPMapper;
+    private final MyDuToanKinhPhiMapper dutoanKPMapper;
 
-    public DutoanKPQueryService(DutoanKPRepository dutoanKPRepository, DutoanKPMapper dutoanKPMapper) {
+    public DutoanKPQueryService(DutoanKPRepository dutoanKPRepository, MyDuToanKinhPhiMapper dutoanKPMapper) {
         this.dutoanKPRepository = dutoanKPRepository;
         this.dutoanKPMapper = dutoanKPMapper;
     }

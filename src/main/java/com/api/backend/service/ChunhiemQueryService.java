@@ -61,11 +61,12 @@ public class ChunhiemQueryService extends QueryService<Chunhiem> {
      * @return the matching entities.
      */
     @Transactional(readOnly = true)
-    public Page<ChunhiemDTO> findByCriteria(ChunhiemCriteria criteria, Pageable page) {
+    public Page<Chunhiem> findByCriteria(ChunhiemCriteria criteria, Pageable page) {
         log.debug("find by criteria : {}, page: {}", criteria, page);
         final Specification<Chunhiem> specification = createSpecification(criteria);
-        return chunhiemRepository.findAll(specification, page)
-            .map(chunhiemMapper::toDto);
+        return chunhiemRepository.findAll(specification, page);
+//        return chunhiemRepository.findAll(specification, page)
+//            .map(chunhiemMapper::toDto);
     }
 
     /**

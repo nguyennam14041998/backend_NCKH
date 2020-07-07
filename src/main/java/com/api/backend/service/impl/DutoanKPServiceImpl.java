@@ -5,6 +5,7 @@ import com.api.backend.domain.DutoanKP;
 import com.api.backend.repository.DutoanKPRepository;
 import com.api.backend.service.dto.DutoanKPDTO;
 import com.api.backend.service.mapper.DutoanKPMapper;
+import com.api.backend.service.mapper.MyDuToanKinhPhiMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,9 +27,9 @@ public class DutoanKPServiceImpl implements DutoanKPService {
 
     private final DutoanKPRepository dutoanKPRepository;
 
-    private final DutoanKPMapper dutoanKPMapper;
+    private final MyDuToanKinhPhiMapper dutoanKPMapper;
 
-    public DutoanKPServiceImpl(DutoanKPRepository dutoanKPRepository, DutoanKPMapper dutoanKPMapper) {
+    public DutoanKPServiceImpl(DutoanKPRepository dutoanKPRepository, MyDuToanKinhPhiMapper dutoanKPMapper) {
         this.dutoanKPRepository = dutoanKPRepository;
         this.dutoanKPMapper = dutoanKPMapper;
     }

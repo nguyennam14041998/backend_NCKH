@@ -1,5 +1,6 @@
 package com.api.backend.service;
 
+import com.api.backend.domain.Nhansuthamgia;
 import com.api.backend.service.dto.NhansuthamgiaDTO;
 
 import org.springframework.data.domain.Page;
@@ -35,7 +36,7 @@ public interface NhansuthamgiaService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    Optional<NhansuthamgiaDTO> findOne(Long id);
+    Optional<Nhansuthamgia> findOne(Long id);
 
     /**
      * Delete the "id" nhansuthamgia.

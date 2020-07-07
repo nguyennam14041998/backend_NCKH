@@ -70,10 +70,10 @@ public class DetaiServiceImpl implements DetaiService {
      */
     @Override
     @Transactional(readOnly = true)
-    public Optional<DetaiDTO> findOne(Long id) {
+    public Optional<Detai> findOne(Long id) {
         log.debug("Request to get Detai : {}", id);
-        return detaiRepository.findById(id)
-            .map(detaiMapper::toDto);
+        return detaiRepository.findById(id);
+//            .map(detaiMapper::toDto);
     }
 
     /**

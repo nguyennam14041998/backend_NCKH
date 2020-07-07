@@ -61,11 +61,12 @@ public class DetaiQueryService extends QueryService<Detai> {
      * @return the matching entities.
      */
     @Transactional(readOnly = true)
-    public Page<DetaiDTO> findByCriteria(DetaiCriteria criteria, Pageable page) {
+    public Page<Detai> findByCriteria(DetaiCriteria criteria, Pageable page) {
         log.debug("find by criteria : {}, page: {}", criteria, page);
         final Specification<Detai> specification = createSpecification(criteria);
-        return detaiRepository.findAll(specification, page)
-            .map(detaiMapper::toDto);
+        return detaiRepository.findAll(specification, page);
+//        return detaiRepository.findAll(specification, page)
+//            .map(detaiMapper::toDto);
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.api.backend.web.rest;
 
+import com.api.backend.domain.Detai;
 import com.api.backend.service.DetaiService;
 import com.api.backend.web.rest.errors.BadRequestAlertException;
 import com.api.backend.service.dto.DetaiDTO;
@@ -99,9 +100,9 @@ public class DetaiResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of detais in body.
      */
     @GetMapping("/detais")
-    public ResponseEntity<List<DetaiDTO>> getAllDetais(DetaiCriteria criteria, Pageable pageable) {
+    public ResponseEntity<List<Detai>> getAllDetais(DetaiCriteria criteria, Pageable pageable) {
         log.debug("REST request to get Detais by criteria: {}", criteria);
-        Page<DetaiDTO> page = detaiQueryService.findByCriteria(criteria, pageable);
+        Page<Detai> page = detaiQueryService.findByCriteria(criteria, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
@@ -125,9 +126,9 @@ public class DetaiResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the detaiDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/detais/{id}")
-    public ResponseEntity<DetaiDTO> getDetai(@PathVariable Long id) {
+    public ResponseEntity<Detai> getDetai(@PathVariable Long id) {
         log.debug("REST request to get Detai : {}", id);
-        Optional<DetaiDTO> detaiDTO = detaiService.findOne(id);
+        Optional<Detai> detaiDTO = detaiService.findOne(id);
         return ResponseUtil.wrapOrNotFound(detaiDTO);
     }
 

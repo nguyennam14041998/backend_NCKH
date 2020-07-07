@@ -70,10 +70,10 @@ public class NhansuthamgiaServiceImpl implements NhansuthamgiaService {
      */
     @Override
     @Transactional(readOnly = true)
-    public Optional<NhansuthamgiaDTO> findOne(Long id) {
+    public Optional<Nhansuthamgia> findOne(Long id) {
         log.debug("Request to get Nhansuthamgia : {}", id);
-        return nhansuthamgiaRepository.findById(id)
-            .map(nhansuthamgiaMapper::toDto);
+        return nhansuthamgiaRepository.findById(id);
+//            .map(nhansuthamgiaMapper::toDto);
     }
 
     /**
